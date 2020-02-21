@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.4.1'
 
-gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
+gem 'rails', '~> 5.2.4'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
@@ -18,6 +18,7 @@ gem 'faraday'
 group :development, :test do
   gem 'pry'
   gem 'rspec-rails'
+  gem 'figaro'
 end
 
 group :development do

@@ -1,14 +1,14 @@
-<h3>results for <%= search_input %></h3>
+<h3>results for <%= search_results.book_title %></h3>
 
-<p>Title: <%= book.title %></p>
-<p>Author(s):  <% book.author.each do |author| %>
+<p>Title: <%= search_results.book.title %></p>
+<p>Author(s):  <% search_results.book.author.each do |author| %>
                     <%= author %>
                 <% end %>
 </p>
-<p>Genres: <%= book.genres %></p>
+<p>Genres: <%= search_results.book.genres %></p>
 
 <section id="reviews"><h3>Reviews from NYT:</h3>
-  <% reviews.each do |review| %>
+  <% search_results.reviews.each do |review| %>
       <section class="review">
         <p class="summary"><%= review.summary %></p>
         <p class="date"><%= review.publication_date %></p>
