@@ -13,7 +13,10 @@ RSpec.describe "as a user" do
 
     expect(page).to have_content("The Man Who Saw Everything")
     expect(page).to have_content("Deborah Levy")
-    expect(page).to have_content
+  end
+
+  it "when I search for a book by title I also see reviews from the NYT for that book" do
+    
   end
 end
 
