@@ -6,10 +6,11 @@ class SearchResultsFacade
   end
 
   def book
+    return @book if @book
     library_service = OpenLibraryService.new
     book_api_data = library_service.get_book_by_title(@book_title)
 
-    Book.new(book_api_data)
+    @book = Book.new(book_api_data)
   end
 
   def reviews
