@@ -6,3 +6,12 @@
                 <% end %>
 </p>
 <p>Genres: <%= book.genres %></p>
+
+<section id="reviews">
+  <% reviews.each do |review| %>
+      <section class="review">
+        <p class="summary"><%= review.summary %></p>
+        <p class="date"><%= review.publication_date %></p>
+      </section>
+  <% end %>
+</section>
